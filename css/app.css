@@ -10,24 +10,68 @@ body {
     scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 .font-estetik {
     font-family: 'Sacramento', cursive !important;
     color: #ffffff !important;
 }
 
+.font-estetik1 {
+    font-family: 'Poppins', cursive !important;
+    color: #ffffff !important;
+}
+
+.font-estetik2 {
+    font-family: 'Allura', cursive !important;
+    color: #ffffff !important;
+}
+.font-estetik3 {
+    font-family: 'Humnst777 BT Roman', cursive !important;
+    color: #ffffff !important;
+}
+
+.bg{
+    background-image: linear-gradient(rgba(41, 41, 41, 0.301), rgba(41, 41, 41, 0.310)), url("../assets/images/3.jpeg");
+    background-repeat: no-repeat;
+    background-size: 480px 950px;
+    background-position: center;
+}
+
+.bg1{
+    background-image: linear-gradient(rgba(114, 114, 114, 0.678), rgba(19, 18, 18, 0.514)), url("../assets/images/wedding.gif");
+    background-repeat: no-repeat;
+    background-size: 480px 950px;
+    background-position: center;
+}
+
+.bg2{
+    background-image: linear-gradient(rgba(41, 41, 41, 0.493), rgba(41, 41, 41, 0.493)), url("../assets/images/hal2.gif");
+    background-repeat: no-repeat;
+    background-size: 480px 950px;
+    background-position: center;
+}
+
+.bg3{
+    background-image: linear-gradient(rgba(41, 41, 41, 0.493), rgba(41, 41, 41, 0.493)), url("../assets/images/hal3.gif");
+    background-repeat: no-repeat;
+    background-size: 480px 950px;
+    background-position: center;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .cropper {
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
 }
 
-.cropper>img {
+.cropper>img {    
+    width: 10rem;
+    height: 10rem;
     display: inline;
     margin: 0 auto;
     height: auto;

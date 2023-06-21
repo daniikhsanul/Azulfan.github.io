@@ -69,12 +69,34 @@ const timer = () => {
     }, 1000);
 };
 
+const timer1 = () => {
+    var countDownDate = (new Date(document.getElementById('tampilan-waktu1').getAttribute('data-waktu1').replace(' ', 'T'))).getTime();
+    var time = undefined;
+    var distance = undefined;
+
+    time = setInterval(() => {
+        distance = countDownDate - (new Date()).getTime();
+
+        if (distance < 0) {
+            clearInterval(time);
+            time = undefined;
+            return;
+        }
+
+        document.getElementById('hari1').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById('jam1').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById('menit1').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById('detik1').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    }, 1000);
+};
+
 const buka = async () => {
     document.getElementById('tombol-musik').style.display = 'block';
     audio.play();
     AOS.init();
     await login();
     timer();
+    timer1();
 };
 
 const play = (btn) => {
@@ -319,7 +341,7 @@ const renderLoading = (num) => {
 
 const pagination = (() => {
 
-    const perPage = 10;
+    const perPage = 2;
     var pageNow = 0;
     var resultData = 0;
 
